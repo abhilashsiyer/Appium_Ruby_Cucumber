@@ -1,0 +1,10 @@
+Project_name: "US2FormValidator"
+Details_id: "com.ustwo.sample:id/commit_list_row_textview_message"
+Date_id: "com.ustwo.sample:id/commit_list_row_textview_date"
+Outerframe_id: "com.ustwo.sample:id/commit_list_listview_commits"
+Name_id: "com.ustwo.sample:id/commit_detail_textview_name"
+email_id: "com.ustwo.sample:id/commit_detail_textview_email"
+time_id: "com.ustwo.sample:id/commit_detail_textview_date"
+info_id: "com.ustwo.sample:id/commit_detail_textview_message"
+
+

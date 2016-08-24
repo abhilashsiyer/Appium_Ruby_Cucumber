@@ -1,0 +1,15 @@
+= Appium Auomation Project in Ruby
+
+== Introduction
+
+This project demonstrates using og Appium with Ruby
+
+== Project Layout
+
+* features/*.feature : Scenarios for verifying acceptance criteria
+* features/step_definitions/steps.rb : generic steps that apply to all feature
+* features/support/env.rb : configures the driver and the hostname to use
+* features/lib : common functions for reusability
+* features/resources/properties.yaml : id and constants paramterisation
+
+
