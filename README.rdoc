@@ -1,4 +1,4 @@
-= Appium Auomation Project in Ruby
+= Appium Automation Project in Ruby
 
 == Introduction
 
