@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'appium_lib'
 require 'selenium-webdriver'
-puts "ABHI"
+puts "ABHILASH"
 
 desired_caps = {  
    caps: {  

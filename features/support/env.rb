@@ -2,12 +2,8 @@ require 'rubygems'
 require 'appium_lib'
 require 'selenium-webdriver'
 require 'test/unit/assertions'
+require 'watir-webdriver'
 
-# Capybara.configure do |config|
-#   config.default_driver = :selenium
-#   config.app_host   = 'http://www.google.com'
-# end
-# World(Capybara)
 desired_caps = {
     caps: {
         platformName: 'Android',
@@ -27,8 +23,13 @@ World Test::Unit::Assertions
 sleep(5)
 
  Before {
+   $browser = Watir::Browser.new :chrome
+   sleep(10)
+   $browser.goto "https://github.com/ustwo/US2FormValidator"
+   sleep(10)
    @selenium_driver = @appium_driver.start_driver
-   sleep(20)
+   sleep(15)
   }
- After { $driver.driver_quit }
-
+ After { 
+  $driver.driver_quit
+  $browser.close }
