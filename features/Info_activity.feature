@@ -1,12 +1,12 @@
 @Feature_home
 Feature: As a developer I’m interested in following the development of the project
-  @Test1
+  @Title
   Scenario: Display project information
     Given I have the application launched
     When I check for Project Title
     Then I should see Project Name as appeared in Github
 
-  @Test2
+  @Latest_activity
   Scenario: Display project information
     Given I have the application launched
     When I refresh the screen
