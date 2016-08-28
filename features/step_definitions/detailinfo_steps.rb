@@ -1,10 +1,14 @@
- When /^I navigate to see information about "([^"]*)"$/ do |text| # With current code, error input is not handeled due to limitations with swipe and scroll.Ref to def checkforcontent for details.
-  $view.checkforcontent(text).present?
+When /^I navigate to see information about "([^"]*)"$/ do |text|
+  index = $view.checkforcontent(text)
+  $browse.click_commit(index)
 end
 
 Then /^I Check commit information in terms of "([^"]*)"$/ do |text|
-  $view = Details.new
-  $view.details_check(text)
+  $view = DetailsInfoApp.new
+  $browse = CommitListInfo.new
+  detail = $view.details_check(text)
+  detail.equal?$browse.check_details(text)
+  puts detail
 end
 
 

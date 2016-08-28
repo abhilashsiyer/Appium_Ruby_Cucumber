@@ -1,36 +1,34 @@
 Given /^I have the application launched$/ do
   puts 'Initiliazing'
-  $view = Home.new
+  $view = HomeApp.new
   $yml = YML.new
+  $browse = HomeWeb.new
 
 end
 
-Then /^I should see application home screen$/ do
-  $view.element_id($yml.read_yaml('Details_id')).present?
-end
-
-And /^I refresh the screen$/ do
+When /^I refresh the screen$/ do
   $view.element_id("com.ustwo.sample:id/commit_list_button_refresh").click
   puts "Refreshing the screen"
-  sleep(15)
-
 end
 
-When /^I check for "([^"]*)"$/ do |text|
-  if text == "Project title"
+When /^I check for Project Title$/ do
     $view.element_name($yml.read_yaml('Project_name')).present?
-  elsif text == "latest project activity"
-    $view.element_id($yml.read_yaml('Details_id')).present?
-  end
-
 end
 
-Then /^I should see Project Name$/ do
+And /^I click commit list at github website$/ do
+  $browse.click_commit
+  sleep(15)
+  $browse = CommitList.new
+end
+
+Then /^I should see Project Name as appeared in Github$/ do
   name = $view.element_name($yml.read_yaml('Project_name')).text
+  name.equal?$browse.project_name_check
   puts "Project name is " + name
 end
 
-Then /^I should see latest activity/ do
+Then /^I should see latest activity as appeared in Github$/ do
   activity = $view.element_id($yml.read_yaml('Details_id')).text
+  activity.equal?$browse.first_element_name
   puts "Latest activity is " + activity
 end
