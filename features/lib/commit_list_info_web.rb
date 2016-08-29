@@ -5,8 +5,8 @@ class CommitListInfo #-- This class contains methods to check details in git com
   end
 #-- This method takes the details from Github web page and returns the text
   def check_details(text)
-    if text == "name"
-      return $browser.a(:class, 'user-mention').text
+    if text == "who"
+      return $browser.span(:class, 'user-mention').text
     elsif text == "detail"
       return $browser.p(:class, 'commit-title').text
     end
