@@ -1,6 +1,6 @@
 = Appium Automation Project in Ruby
 
-== Introduction
+== Introduction Abhi
 
 This project demonstrates using og Appium with Ruby
 
