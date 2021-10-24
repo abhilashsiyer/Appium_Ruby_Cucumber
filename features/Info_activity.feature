@@ -1,4 +1,4 @@
-@Feature_home
+@Feature_home_master
 Feature: As a developer I’m interested in following the development of the project
   @Title
   Scenario: Verify project name displayed in the application
