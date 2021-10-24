@@ -12,4 +12,4 @@ This project demonstrates using og Appium with Ruby
 * features/lib : common functions for reusability
 * features/resources/properties.yaml : id and constants paramterization
 
-
+test new
