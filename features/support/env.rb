@@ -24,11 +24,11 @@ sleep(5)
 
  Before {
    $browser = Watir::Browser.new :chrome
-   sleep(10)
+   sleep(12)
    $browser.goto "https://github.com/ustwo/US2FormValidator"
-   sleep(10)
+   sleep(19)
    @selenium_driver = @appium_driver.start_driver
-   sleep(15)
+   sleep(13)
   }
  After { 
   $driver.driver_quit
