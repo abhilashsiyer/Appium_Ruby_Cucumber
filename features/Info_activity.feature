@@ -1,4 +1,4 @@
-@Feature_home_master
+@Feature_home_Abhi
 Feature: As a developer I’m interested in following the development of the project
   @Title
   Scenario: Verify project name displayed in the application
@@ -6,7 +6,7 @@ Feature: As a developer I’m interested in following the development of the pro
     When I check for Project Title
     Then I should see Project Name as appeared in Github
 
-  @Latest_activity
+  @Latest_activity_Abhi_One_More
   Scenario: Verify latest commit activity displayed in the application
     Given I have the application launched
     When I refresh the screen
