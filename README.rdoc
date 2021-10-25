@@ -11,5 +11,3 @@ This project demonstrates using og Appium with Ruby
 * features/support/env.rb : configures the driver and the hostname to use
 * features/lib : common functions for reusability
 * features/resources/properties.yaml : id and constants paramterization
-
-test new
