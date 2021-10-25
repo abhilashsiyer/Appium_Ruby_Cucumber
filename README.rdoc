@@ -1,4 +1,4 @@
-= Appium Automation Project in Ruby
+= Abhi Appium Automation Project in Ruby
 
 == Introduction Abhi
 
